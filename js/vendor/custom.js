@@ -44,7 +44,7 @@ $(document).ready(function() {
                 style: 'custom',
                 delayBefore: 100,
                 exitTime: 300,
-                loaderText: 'Wait for a moment!',
+                loaderText: 'Website is Ready!',
                 lettersDelayTime: 0
             }
         },
