@@ -1,0 +1,253 @@
+@font-face {
+	font-weight: normal;
+	font-style: normal;
+	font-family: 'feathericons';
+	src:url('../fonts/feathericons/feathericons.eot?-8is7zf');
+	src:url('../fonts/feathericons/feathericons.eot?#iefix-8is7zf') format('embedded-opentype'),
+		url('../fonts/feathericons/feathericons.woff?-8is7zf') format('woff'),
+		url('../fonts/feathericons/feathericons.ttf?-8is7zf') format('truetype'),
+		url('../fonts/feathericons/feathericons.svg?-8is7zf#feathericons') format('svg');
+}
+
+.grid1 {
+	position: relative;
+	padding: 1em 0 4em;
+	max-width: 1000px;
+	list-style: none;
+	text-align: center;
+}
+.grid1 h2{
+    font-family:'Raleway',sans-serif;
+    color:#f00;
+}
+.description{
+    font-family:'Raleway',monospace;
+    font-weight: bolder;
+    color:white;
+}
+
+/* Common style */
+.grid1 figure1 {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	margin: 10px 1%;
+	background: #3085a3;
+	text-align: center;
+	cursor: pointer;
+}
+
+.grid1 figure1 img {
+	position: relative;
+	display: block;
+    width:600px;
+    height:400px;
+	opacity: 1;
+}
+
+.grid1 figure1 figcaption1 {
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.grid1 figure1 figcaption1::before,
+.grid1 figure1 figcaption1::after {
+	pointer-events: none;
+}
+
+.grid1 figure1 figcaption1,
+.grid1 figure1 figcaption1 > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid1 figure1 figcaption1 > a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+.grid1 figure1 h2 {
+	word-spacing: 0 em;
+	font-weight: bolder;
+}
+
+
+.grid1 figure1 h2,
+.grid1 figure1 p {
+	margin: 0;
+}
+
+.grid1 figure1 p {
+	letter-spacing: 1px;
+	font-size: 68.5%;
+}
+
+
+/*---------------*/
+/***** Zoe *****/
+/*---------------*/
+
+figure1.effect-zoe figcaption1 {
+	top: auto;
+	bottom: 0;
+	padding: 1em;
+	height: 3.75em;
+	background: #fff;
+	color: #3c4a50;
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: translate3d(0,100%,0);
+	transform: translate3d(0,100%,0);
+}
+
+figure1.effect-zoe h2 {
+	float: left;
+}
+
+figure1.effect-zoe p.icon-links a {
+	float: right;
+	color: #3c4a50;
+	font-size: 1.4em;
+}
+
+figure1.effect-zoe:hover p.icon-links a:hover,
+figure1.effect-zoe:hover p.icon-links a:focus {
+	color: #252d31;
+}
+
+figure1.effect-zoe p.description {
+	position: absolute;
+	bottom: 8em;
+	padding: 2em;
+	color: #fff;
+	text-transform: none;
+	font-size: 90%;
+	opacity: 0;
+	-webkit-transition: opacity 0.35s;
+	transition: opacity 0.35s;
+	-webkit-backface-visibility: hidden; /* Fix for Chrome 37.0.2062.120 (Mac) */
+}
+
+figure1.effect-zoe h2,
+figure1.effect-zoe p.icon-links a {
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: translate3d(0,200%,0);
+	transform: translate3d(0,200%,0);
+}
+
+figure1.effect-zoe p.icon-links a span::before {
+	display: inline-block;
+	padding: 8px 10px;
+	font-family: 'feathericons';
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-eye::before {
+	content: '\e000';
+}
+
+.icon-paper-clip::before {
+	content: '\e001';
+}
+
+.icon-heart::before {
+	content: '\e024';
+}
+
+figure1.effect-zoe h2 {
+	display: inline-block;
+}
+
+figure1.effect-zoe:hover img{
+    opacity:0.4;
+}
+figure1.effect-zoe:hover p.description {
+	opacity: 1;
+}
+
+figure1.effect-zoe:hover figcaption1,
+figure1.effect-zoe:hover h2,
+figure1.effect-zoe:hover p.icon-links a {
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+figure1.effect-zoe:hover h2 {
+	-webkit-transition-delay: 0.05s;
+	transition-delay: 0.05s;
+}
+
+.grid1 i:hover{
+    color:#f00;
+}
+figure1.effect-zoe:hover p.icon-links a:nth-child(3) {
+	-webkit-transition-delay: 0.1s;
+	transition-delay: 0.1s;
+}
+
+figure1.effect-zoe:hover p.icon-links a:nth-child(2) {
+	-webkit-transition-delay: 0.15s;
+	transition-delay: 0.15s;
+}
+
+figure1.effect-zoe:hover p.icon-links a:first-child {
+	-webkit-transition-delay: 0.2s;
+	transition-delay: 0.2s;
+}
+
+/* media queries */
+@media screen and (max-width: 58em) {
+	.grid1 div {
+		width: 33.333%;
+	}
+
+}
+
+@media screen and (max-width: 45em) {
+	.grid1 {
+		max-width: 500px;
+	}
+
+	.grid1 div {
+		width: 50%;
+	}
+
+
+	.grid1 figcaption1 h2 {
+		margin-bottom: 0px;
+		-webkit-transform: translateY(30px);
+		transform: translateY(30px);
+	}
+
+	.grid1 figcaption1 p {
+		margin: 0;
+		padding: 0 10px;
+	}
+}
+
+@media screen and (max-width: 27em) {
+	.grid1 {
+		max-width: 250px;
+	}
+
+	.grid1 div {
+		width: 100%;
+	}
+
+
+}

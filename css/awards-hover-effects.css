@@ -1,0 +1,194 @@
+/* Common style */
+.grid {
+	margin: 40px auto 120px;
+	max-width: 1000px;
+	width: 90%;
+}
+
+.grid div {
+	float: left;
+	width: 25%;
+	color: #333;
+}
+
+.grid div:nth-child(odd) {
+	margin: 30px 0 -30px 0;
+}
+
+.grid figure {
+	position: relative;
+	overflow: hidden;
+	margin: 5px;
+	background: #333;
+}
+
+.grid figure img {
+	position: relative;
+	display: block;
+	width: 600px;
+    height:400px;
+	opacity: 0.7;
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+}
+
+.grid figcaption {
+	position: absolute;
+	top: 0;
+	z-index: 11;
+	padding: 10px;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+.grid figcaption h2 {
+	margin: 0 0 20px 0;
+	color:#ffc30d;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 300;
+	font-size: 130%;
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+}
+
+.grid figcaption p {
+	padding: 0 20px;
+	color: black;
+	font-weight: 300;
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+	transition: opacity 0.3s, transform 0.3s;
+}
+
+.grid figcaption h2,
+.grid figcaption p {
+	-webkit-transform: translateY(50px);
+	transform: translateY(50px);
+    timing-function: cubic-bezier(0.250, 0.250, 0.115, 1.445);
+}
+
+.grid figure button {
+	opacity: 0;
+}
+
+.grid figcaption,
+.grid figcaption h2,
+.grid figcaption p,
+.grid figure button {
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+/* Style for SVG */
+.grid svg {
+	position: absolute;
+	top: -1px; /* fixes rendering issue in FF */
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+}
+
+.grid svg path {
+	fill: #fff;
+}
+
+/* Hover effects */
+.grid div:hover figure img {
+	opacity: 0.5;
+}
+
+.grid div:hover figcaption h2,
+.grid div:hover figcaption p {
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+    transition-delay: 0s;
+	transition-duration: 0.1s;
+}
+
+.grid div:hover figcaption p {
+	opacity: 0;
+}
+.grid div:hover figure button{
+    opacity: 1;
+	transform: translateY(-50%) translateX(-50%) scale(1);
+    position: absolute;
+	padding: 10px;
+	border: 3px solid #ffc30d;
+	text-transform: uppercase;
+    font-family:'Raleway',sans-serif;
+    font-size:20px;
+	letter-spacing: 1px;
+	font-weight: bolder;
+	transition: opacity 0.3s, transform 0.3s;
+    bottom: 0;
+	margin-left: 10px;
+}
+
+.grid div:hover figure button a{
+    color:#ffc30d;
+}
+.grid figure button:hover{
+    background-color:white;
+    color:#ffc30d;
+}
+/* Media Queries */
+/* Let's redefine the width of each anchor and the margins */
+
+@media screen and (max-width: 58em) {
+	.grid div {
+		width: 33.333%;
+	}
+
+	.grid div:nth-child(odd) {
+		margin: 0;
+	}
+
+	.grid div:nth-child(3n-1) {
+		margin: 30px 0 -30px 0;
+	}
+}
+
+@media screen and (max-width: 45em) {
+	.grid {
+		max-width: 500px;
+	}
+
+	.grid div {
+		width: 50%;
+	}
+
+	.grid div:nth-child(3n-1) {
+		margin: 0;
+	}
+
+	.grid div:nth-child(even) {
+		margin: 30px 0 -30px 0;
+	}
+
+
+	.grid figcaption h2 {
+		margin-bottom: 0px;
+		-webkit-transform: translateY(30px);
+		transform: translateY(30px);
+	}
+
+	.grid figcaption p {
+		margin: 0;
+		padding: 0 10px;
+	}
+}
+
+@media screen and (max-width: 27em) {
+	.grid {
+		max-width: 250px;
+	}
+
+	.grid div {
+		width: 100%;
+	}
+
+	.grid div:nth-child(even) {
+		margin: 0;
+	}
+}
